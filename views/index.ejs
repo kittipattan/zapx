@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Welcome to the Home Page</h1>
+    <% if (user) { %>
+    <p>Hello, <%= user.username %>! <a href="/logout">Logout</a></p>
+    <a href="/xss-reflected?input="></a>
+    <a href="/xss-stored"></a>
+    <a href="/xss-dom?input="></a>
+    <a href="/sqli?username="></a>
+    <a href="/idor?userId="></a>
+    <a href="/csrf"></a>
+    <a href="/ssrf?url="></a>
+    <a href="/client-storage"></a>
+    <a href="/sensitive-info"></a>
+    <a href="/no-bot-defense"></a>
+    <% } else { %>
+    <p>Please <a href="/login">login</a> first</p>
+    <% } %>
+  </body>
+</html>
